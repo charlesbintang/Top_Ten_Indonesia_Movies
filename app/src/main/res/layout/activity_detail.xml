@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detail_poster"
+            android:layout_width="280dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/poster"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/detail_title"
+            style="@style/TextContent.HeadlineMedium.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poster" />
+
+
+        <TextView
+            android:id="@+id/detail_tahun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tahun"
+            app:layout_constraintEnd_toStartOf="@+id/detail_penonton"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/detail_title" />
+
+        <TextView
+            android:id="@+id/detail_penonton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/penonton"
+            app:layout_constraintEnd_toEndOf="@+id/detail_title"
+            app:layout_constraintStart_toEndOf="@+id/detail_tahun"
+            app:layout_constraintTop_toBottomOf="@+id/detail_title" />
+
+
+        <TextView
+            android:id="@+id/detail_description"
+            style="@style/TextContent.BodyMedium.Gray.MarginLeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1"
+            android:text="@string/description"
+            android:textColor="#616161"
+            app:layout_constraintEnd_toEndOf="@+id/detail_title"
+            app:layout_constraintStart_toStartOf="@+id/detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/detail_tahun" />
+
+        <TextView
+            android:id="@+id/detail_sutradara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/sutradara"
+            app:layout_constraintEnd_toStartOf="@+id/detail_produksi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/detail_description" />
+
+        <TextView
+            android:id="@+id/detail_produksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/produksi"
+            app:layout_constraintEnd_toEndOf="@+id/detail_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_sutradara"
+            app:layout_constraintTop_toBottomOf="@+id/detail_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
